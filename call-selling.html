@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Bán Xe với UTCAR</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/sales-car.css">
+</head>
+
+<body>
+  <!-- header  -->
+  <header class="header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="inner-main">
+            <div class="inner-logo">
+              <a href="index.html">
+                <img src="assets/image/HomePage/Logo.png" alt="logo">
+              </a>
+            </div>
+            <div class="inner-menu">
+              <ul>
+                <li>
+                  <a href="index.html">Trang Chủ</a>
+                </li>
+                <li>
+                  <a href="introduction.html">Giới Thiệu</a>
+                </li>
+                <li>
+                  <a href="Buy-Car.html">Mua Xe</a>
+                </li>
+                <li>
+                  <a href="call-selling.html" class="active">Bán Xe</a>
+                </li>
+                <li>
+                  <a href="contact.html">Liên Hệ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="inner-contact">
+              <i class="fa-solid fa-phone"></i>
+              <div class="inner-phone">023321312</div>
+            </div>
+            <div class="inner-dn">
+
+              <a href="signup.html"><i class="fa-regular fa-circle-user"></i></a>
+              <a href="signup.html" class="inner-sign">Đăng Nhập</a>
+            </div>
+            <div class="inner-list">
+              <a href="contact.html"><i class="fa-solid fa-phone"></i></a>
+              <a href="signup.html"><i class="fa-regular fa-circle-user"></i></a>
+              <i class="fa-solid fa-bars" id="togger"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="inner-menu an">
+            <ul>
+              <li>
+                <a href="index.html">Trang Chủ</a>
+              </li>
+              <li>
+                <a href="introduction.html">Giới Thiệu</a>
+              </li>
+              <li>
+                <a href="Buy-Car.html">Mua Xe</a>
+              </li>
+              <li>
+                <a href="call-selling.html" class="active">Bán Xe</a>
+              </li>
+              <li>
+                <a href="contact.html">Liên Hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end header  -->
+  <div class="section-1 hidden">
+    <div class="container">
+      <div class="left">
+        <div class="inner-title">Bán xe của bạn
+          với giá tốt nhất</div>
+        <div class="inner-logo">
+          <img src="assets/image/CarSales/nghia1.png" alt="CARPLA">
+        </div>
+      </div>
+      <div class="right">
+        <div class="inner-righttop">
+          <img src="assets/image/CarSales/nghia2.png" alt="">
+          <p>Bán Xe</p>
+        </div>
+        <div class="inner-desc">
+          <p>Nhập thông tin chi tiết xe của bạn và nhận báo giá ngay</p>
+        </div>
+        <div class="inner-form">
+          <form name="car_selling_form">
+            <div>
+              <label for="carBrand">Hãng xe :</label>
+              <br>
+              <input type="text" id="carBrand" name="carBrand" placeholder="Nhập hãng xe">
+              <p id="brandStatus">*Vui lòng nhập hãng xe</p>
+            </div>
+            <div>
+              <label for="carModel">Dòng xe :</label>
+              <br>
+              <input type="text" id="carModel" name="carModel" placeholder="Nhập dòng xe">
+              <p id="modelStatus">*Vui lòng nhập dòng xe</p>
+            </div>
+            <div><label for="yearOfManufacture">Năm sản xuất :</label>
+              <br>
+              <input type="text" id="yearOfManufacture" name="yearOfManufacture" placeholder="Năm sản xuất">
+              <p id="yearStatus">*Vui lòng nhập năm sản xuất</p>
+            </div>
+            <div><label for="version">Phiên bản :</label>
+              <br>
+              <input type="text" id="version" name="version" placeholder="Phiên bản">
+              <p id="versionStatus">*Vui lòng nhập phiên bản</p>
+            </div>
+            <div><label for="mileage">Số km đã đi :</label>
+              <br>
+              <input type="text" id="mileage" name="mileage" placeholder="Số km đã đi">
+              <p id="mileageStatus">*Vui lòng nhập số km đã đi </p>
+            </div>
+            <div><label for="phoneNumber">Số điện thoại :</label>
+              <br>
+              <input type="text" id="phoneNumber" name="phoneNumber" placeholder="096xxxxxxx">
+              <p id="phoneNumberStatus">*Vui lòng nhập số điện thoại </p>
+            </div>
+
+            <button class="btn " onclick="validForm(document.forms.car_selling_form, event)">Gửi thông tin </button>
+          </form>
+        </div>
+        <div class="inner-clause">Để tiếp tục, tôi đồng ý với <a href="">Chính sách quyền riêng tư, Điều khoản sử
+            dụng</a> &
+          <a href="">Điều khoản & điều kiện niêm yết</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section end  -->
+  <section class="section-end">
+    <div class="container">
+      <div class="row box1">
+        <div class="inner-news col-xl-5 col-lg-5 col-md-5 col-sm-12">
+          <h3 class="inner-sub">đăng kí nhận bản tin của chúng tôi</h3>
+          <p class="inner-desc">Nhận những ưu đãi mới nhất, chương trình khuyến mãi & nhiều quyền lợi độc quyền trực
+            tiếp vào hòm thư của bạn</p>
+        </div>
+        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+          <form action="#">
+            <div class="row">
+              <div class="inner-email col-xl-8 col-lg-12">
+                <input type="email" name="email" id="email" placeholder="Nhập email của bạn">
+              </div>
+              <div class="inner-button col-xl-4 col-lg-12">
+                <button type="submit">Đăng kí</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section end  -->
+  <!-- end  -->
+  <section class="end">
+    <div class="container">
+      <div class="row box">
+        <div class="inner-logo col-xl-5 col-lg-5 col-md-5 col-sm-12">
+          <a href="index.html">
+            <div class="inner-image">
+              <img src="assets/image/HomePage/Logo.png" alt="logo">
+            </div>
+          </a>
+          <p class="inner-desc">UTCAR là nền tảng mua bán xe ô tô đã qua sử dụng lớn nhất Việt Nam</p>
+        </div>
+        <div class="inner-sevice col-xl-3 col-lg-3 col-md-3 col-sm-4">
+          <p class="iner-desc">Dịch Vụ</p>
+          <a href="index.html">Trang chủ</a>
+          <a href="Buy-Car.html">Mua xe</a>
+          <a href="call-selling.html">Bán xe</a>
+          <a href="introduction.html">Giới thiệu</a>
+          <a href="contact.html">Liên hệ</a>
+        </div>
+        <div class="inner-contact col-xl-4 col-lg-4 col-md-4 col-sm-8">
+          <p class="iner-desc">Liên Hệ</p>
+          <div class="row inner-row">
+            <i class="fa-solid fa-location-dot inner-icon col-xl-4 col-lg-4 col-md-4 col-4"></i>
+            <div class="inner-name col-xl-8 col-lg-8 col-md-8 col-8">My company UTCAR</div>
+          </div>
+          <div class="row inner-row">
+            <i class="fa-solid fa-phone-volume inner-icon col-xl-4 col-lg-4 col-md-4 col-4"></i>
+            <div class="inner-name col-xl-8 col-lg-8 col-md-8 col-8">043243254</div>
+          </div>
+          <div class="row inner-row">
+            <i class="fa-regular fa-envelope inner-icon col-xl-4 col-lg-4 col-md-4 col-4"></i>
+            <div class="inner-name col-xl-8 col-lg-8 col-md-8 col-8">utcal@gmail.com</div>
+          </div>
+          <div class="row inner-row">
+            <i class="fa-regular fa-clock inner-icon col-xl-4 col-lg-4 col-md-4 col-4"></i>
+            <div class="inner-name col-xl-8 col-lg-8 col-md-8 col-8">7 Days a week from 9:00 am to 7:00 pm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end end  -->
+  <!-- footer  -->
+  <footer class="footer">
+    <p>© 2024. Copyright by UTCAR
+    </p>
+  </footer>
+  <!-- end footer  -->
+  <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/bootstrap/jquery.slim.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/sale-car.js"></script>
+</body>
+
+</html>
